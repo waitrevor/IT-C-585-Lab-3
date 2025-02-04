@@ -1,13 +1,30 @@
 1. I think the lab instructions ask for the brute force program to run for 2 minutes to mitigate start up times and times that it takes the computer to spin up and shut down whatever other programs it needs to run the brute.py file. This way we can get a more accurate reading of just how long it takes to test different keys.
 
 2. I ran the brute force program a total of 4 times. Once on the initial test to make sure everything was working correctly. Then 3 times each for more than 2 minutes to see rates of keys checked per second.
+(I chose to round to the nearest key because you can't check a fraction of a key.)
+Run 1: 
+Keys per second: about 50684 rounded to the nearest key
 
-3. 
+Run 2:
+Keys per second: about 53714 rounded to the nearest key
 
-4. The other algorithms I used were Camillia and SEED. I used Camillia because it was the first other block cipher that could use a 128 bit key. I also looked at SEED becasue I wanted to see if I could brute force an algorithm that was in the deprecated module that used a 128 bit key. Algorithms using 128 bit key sizes made answering question 7 easier too. I kept all the modes CBC because that is what I already had in the code and the instructions didn't say to change it.
+Run 3:
+Keys per second: about 52918 rounded to the nearest key
 
-5. 
+Average:
+Keys per second: about 52439 rounded to the nearest key
 
-6. 
+3. The change in number of keys checked inbetween runs ranged from just under 1000 keys to over 3000 keys. This could be because the start up time the computer needed to run the brute.py file could have varied each time the program was run. It could also be because I was doing other things on my computer while the program was running causing the program to run slower because the cpu was under load. The thermals of my computer could have also affected the cpu speed and therefore the number of keys tested. What couldn't have affected the number of keys tested was the starting key, initialization vector, and how the keys were incremented because those were hard coded.
 
-7. 
+4. The other algorithms I used were Camellia and SEED. I used Camellia because it was the first other block cipher that could use a 128 bit key. I also looked at SEED becasue I wanted to see if I could brute force an algorithm that was in the deprecated module that used a 128 bit key. Algorithms using 128 bit key sizes allowed my key incrementation to remain the same and made answering question 7 easier too. I kept all the modes CBC because that is what I already had in the code and the instructions didn't say to change it.
+
+5. The Camellia averaged about 52536 keys per second rounded to the nearest key. The SEED averaged about 55499 keys per second rounded to the nearest key. (Again they rounded because you can't test a fraction of a key)
+
+6. The SEED algorithm performed the fastest testing on average the most keys per second. SEED's rate of keys per second was on average about 1.058 times faster than AES and on average about 1.056 times faster than Camellia.
+
+7. Assuming the age of the universe is about 13.7 billion years old, according to NASA. AES would take about 7.503 quadrillion times the age of the universe to brute force on my computer. Camellia would take about 7.489 quadrillion times the age of the universe to brute force on my computer. SEED would take about 7.091 quadrillion times the age of the universe to brute force on my computer.
+Assming that it would take 10^23 years for the possible ionization of matter, meaning all matter density would reach 0, it would take AES 1028 times longer to brute force on my computer than for all matter to ionize. Camellia would take 1026 times longer to brute force on my computer than for all matter to ionize and SEED would take 971.45 times as long to brute force than for all matter to ionize.
+
+Reference:
+https://imagine.gsfc.nasa.gov/science/featured_science/tenyear/age.html#:~:text=But%20with%20advances%20in%20technology,of%20only%20200%20million%20years.
+https://en.wikipedia.org/wiki/Future_of_an_expanding_universe#:~:text=By%201014%20(100%20trillion,fuel%20(see%20stellar%20evolution).
