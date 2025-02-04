@@ -1,0 +1,13 @@
+1. I think the lab instructions ask for the brute force program to run for 2 minutes to mitigate start up times and times that it takes the computer to spin up and shut down whatever other programs it needs to run the brute.py file. This way we can get a more accurate reading of just how long it takes to test different keys.
+
+2. I ran the brute force program a total of 4 times. Once on the initial test to make sure everything was working correctly. Then 3 times each for more than 2 minutes to see rates of keys checked per second.
+
+3. 
+
+4. The other algorithms I used were Camillia and SEED. I used Camillia because it was the first other block cipher that could use a 128 bit key. I also looked at SEED becasue I wanted to see if I could brute force an algorithm that was in the deprecated module that used a 128 bit key. Algorithms using 128 bit key sizes made answering question 7 easier too. I kept all the modes CBC because that is what I already had in the code and the instructions didn't say to change it.
+
+5. 
+
+6. 
+
+7. 
